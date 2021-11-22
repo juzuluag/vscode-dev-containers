@@ -2,15 +2,15 @@
 ## Build
 
 ```sh
-vscode-dev-containers myuser$ build/vscdc push --no-push --registry mcr.jz.com --registry-path vscode/jzcontainers --release master jzrust
+vscode-dev-containers myuser$ build/vscdc push --no-push --registry mcr.jz.com --registry-path vscode/jzcontainers --release main jzrust
 ```
 
 ```sh
-vscode-dev-containers myuser$ build/vscdc cg --registry mcr.jz.com --registry-path vscode/jzcontainers --release master jzrust
+vscode-dev-containers myuser$ build/vscdc cg --registry mcr.jz.com --registry-path vscode/jzcontainers --release main jzrust
 ```
 
 ```sh
-vscode-dev-containers myuser$ build/vscdc pack --prep-and-package-only --release master
+vscode-dev-containers myuser$ build/vscdc pack --prep-and-package-only --release main
 ```
 
 ## Copy tar to use builded container
