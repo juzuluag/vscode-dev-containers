@@ -9,6 +9,18 @@ Run `yarn update` the first time to update the packages
 vscode-dev-containers myuser$ build/vscdc push --no-push --registry mcr.jz.com --registry-path vscode/jzcontainers --release main jzrust
 ```
 
+Connect to recent image created using docker run
+
+```sh
+docker run -it --init --privileged --rm mcr.microsoft.com/vscode/devcontainers/<expected-repository>:dev-<expected tag> bash
+```
+
+For instance use the image id to connect to it
+
+```sh
+docker run -it --init --privileged --rm b2364fad3693  bash
+```
+
 ```sh
 vscode-dev-containers myuser$ build/vscdc cg --registry mcr.jz.com --registry-path vscode/jzcontainers --release main jzrust
 ```
