@@ -1,7 +1,7 @@
 # This base.Dockerfile uses separate build arguments instead of VARIANT
 ARG TARGET_JAVA_VERSION=11
-ARG BASE_IMAGE_VERSION_CODENAME=bullseye
-FROM openjdk:${TARGET_JAVA_VERSION}-jdk-${BASE_IMAGE_VERSION_CODENAME}
+ARG BASE_IMAGE_VERSION_CODENAME=ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:${TARGET_JAVA_VERSION}-${BASE_IMAGE_VERSION_CODENAME}
 
 # Copy library scripts to execute
 COPY library-scripts/*.sh library-scripts/*.env /tmp/library-scripts/

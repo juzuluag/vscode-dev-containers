@@ -1,51 +1,36 @@
 {
-	"variants": [ "17-bullseye", "17-buster", "11-bullseye", "11-buster" ],
+	"variants": [ "11-ubuntu", "17-ubuntu" ],
 	"definitionVersion": "0.204.0",
 	"build": {
-		"latest": "17-bullseye",
+		"latest": "17-ubuntu",
 		"rootDistro": "debian",
 		"variantBuildArgs": {
-			"17-bullseye": {
+			"17-ubuntu": {
 				"TARGET_JAVA_VERSION": "17",
-				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
+				"BASE_IMAGE_VERSION_CODENAME": "ubuntu"
 			},
-			"11-bullseye": {
+			"11-ubuntu": {
 				"TARGET_JAVA_VERSION": "11",
-				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
-			},
-			"17-buster": {
-				"TARGET_JAVA_VERSION": "17",
-				"BASE_IMAGE_VERSION_CODENAME": "buster"
-			},
-			"11-buster": {
-				"JAVA_IMAGE_TAG": "11",
-				"BASE_IMAGE_VERSION_CODENAME": "buster"
+				"BASE_IMAGE_VERSION_CODENAME": "ubuntu"
 			}
 		},
 		"architectures": {
-			"17-bullseye": ["linux/amd64", "linux/arm64"],
-			"11-bullseye": ["linux/amd64", "linux/arm64"],
-			"17-buster": ["linux/amd64"],
-			"11-buster": ["linux/amd64"]
+			"17-ubuntu": ["linux/amd64", "linux/arm64"],
+			"11-ubuntu": ["linux/amd64", "linux/arm64"]
 		},
 		"tags": [
 			"java:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"17-bullseye": [ 
+			"17-ubuntu": [ 
 				"java:${VERSION}-17",
-				"java:${VERSION}-17-jdk-bullseye",
-				"java:${VERSION}-bullseye"
+				"java:${VERSION}-17-ubuntu",
+				"java:${VERSION}-ubuntu"
 			],
-			"11-bullseye": [ 
+			"11-ubuntu": [ 
 				"java:${VERSION}-11",
-				"java:${VERSION}-11-jdk-bullseye" 
-			],
-			"17-jdk-buster": [ 
-				"java:${VERSION}-17-jdk-buster",
-				"java:${VERSION}-buster"
-			],
-			"11-buster": [ "java:${VERSION}-11-jdk-buster" ]
+				"java:${VERSION}-11-ubuntu" 
+			]
 		}
 	},
 	"dependencies": {
