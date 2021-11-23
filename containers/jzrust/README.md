@@ -1,5 +1,9 @@
-# arm32v7/rust
+# arm64v8/rust
+
 ## Build
+
+Note: Make sure to have `nodejs`, `npm` and `yarn`
+Run `yarn update` the first time to update the packages
 
 ```sh
 vscode-dev-containers myuser$ build/vscdc push --no-push --registry mcr.jz.com --registry-path vscode/jzcontainers --release main jzrust
