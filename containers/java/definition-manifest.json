@@ -3,7 +3,7 @@
 	"definitionVersion": "0.204.0",
 	"build": {
 		"latest": "17-ubuntu",
-		"rootDistro": "debian",
+		"rootDistro": "ubuntu",
 		"variantBuildArgs": {
 			"17-ubuntu": {
 				"TARGET_JAVA_VERSION": "17",
@@ -34,7 +34,7 @@
 		}
 	},
 	"dependencies": {
-		"image": "openjdk:${VARIANT}",
+		"image": "mcr.microsoft.com/openjdk/jdk:${VARIANT}",
 		"imageLink": "https://hub.docker.com/_/openjdk",
 		"apt": [{
 			"cgIgnore": false,
